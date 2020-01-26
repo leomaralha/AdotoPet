@@ -1,7 +1,10 @@
-//show - listagem uma de sessao indec - listagem de sessoes
+const User = require('../models/Users')
+
 module.exports = {
   store(req, res) {
-    return res.json(req.body)
+    const email = req.body.email
+    const password = req.body.password
+
   }
 
 }

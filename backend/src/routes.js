@@ -1,13 +1,13 @@
 const express = require ('express')
 const SessionController = require ('./controllers/SessionController')
+const UserController = require('./controllers/UserController')
 
 const routes = express.Router()
 
 
 
 
-routes.post('/users', (req,res)=>{
-  return res.json(req.body)
-})
+routes.post('/sessionauth', SessionController.store)
+routes.post('/user', UserController)
 
 module.exports = routes;
